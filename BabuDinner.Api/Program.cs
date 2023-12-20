@@ -19,7 +19,7 @@ try
 catch (Exception ex)
 {
 
-    throw ex;
+    throw new Exception("Error in Program.cs", ex);
 }
 
 
