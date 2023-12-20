@@ -1,10 +1,11 @@
-using BabuDinner.Application.Services.Authentication;
+using BabuDinner.Application;
+using BabuDinner.Infrastructure;
 
 try
 {
     var builder = WebApplication.CreateBuilder(args);
     {
-        builder.Services.AddTransient<IAuthenticationService, AuthenticationService>();
+        builder.Services.AddApplication().AddInfrastructure();
         builder.Services.AddControllers();
     }
 
